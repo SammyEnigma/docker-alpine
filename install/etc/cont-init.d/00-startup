@@ -71,4 +71,7 @@ if [ -d "/assets/.changelogs" ] ; then
   echo "image_version() { for clname in /assets/.changelogs/* ; do version=\$(head -n 1 \$clname | awk '{print \$2}') ; echo \"Image: $(basename \$clname) \$version\" ; done ;}" >> /root/.bashrc
 fi
 
+# Clean OS logroate directory
+rm -rf /etc/logrotate.d/*
+
 liftoff
